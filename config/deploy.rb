@@ -86,4 +86,5 @@ namespace :deploy do
   end
 
   after :finishing, "deploy:setup_config"
+  after "deploy", "deploy:migrate"
 end
