@@ -49,10 +49,10 @@ set :rbenv_roles, :all # default value
 namespace :deploy do
 
   desc 'Restart application'
-  task :restart do
+  task [:restart, :start, :stop] do |command|
     on roles(:app) do
       # Your restart mechanism here, for example:
-      execute "/etc/init.d/unicorn_#{fetch(:application)} restart"
+      execute "/etc/init.d/unicorn_#{fetch(:application)} #{fetch(command)}"
     end
   end
 
