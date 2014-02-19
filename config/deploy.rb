@@ -52,7 +52,7 @@ namespace :deploy do
   task :restart do
     on roles(:app) do
       # Your restart mechanism here, for example:
-      execute "/etc/init.d/unicorn_#{:application} restart"
+      execute "/etc/init.d/unicorn_#{fetch(:application)} restart"
     end
   end
 
@@ -61,7 +61,7 @@ namespace :deploy do
     on roles(:app) do
       # Here we can do anything such as:
       # within release_path do
-      execute "/etc/init.d/unicorn_#{:application} start"
+      execute "/etc/init.d/unicorn_#{fetch(:application)} start"
       # end
     end
   end
@@ -70,15 +70,15 @@ namespace :deploy do
     on roles(:app) do
       # Here we can do anything such as:
       # within release_path do
-      execute "/etc/init.d/unicorn_#{:application} stop"
+      execute "/etc/init.d/unicorn_#{fetch(:application)} stop"
       # end
     end
   end
 
   task :setup_config do
     on roles(:app) do
-      sudo "ln -nfs #{fetch(:current_path)}/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
-      sudo "ln -nfs #{fetch(:current_path)}/config/unicorn_init.sh /etc/init.d/unicorn_#{fetch(:application)}"
+      sudo "ln -nfs /home/deployer/capistrano/current/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
+      sudo "ln -nfs /home/deployer/capistrano/current/config/unicorn_init.sh /etc/init.d/unicorn_#{fetch(:application)}"
       # execute "mkdir -p #{shared_path}/config"
       # put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
       puts "Now edit the config files in #{shared_path}."
