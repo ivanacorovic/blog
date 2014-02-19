@@ -76,8 +76,8 @@ namespace :deploy do
     end
   end
 
-  set :linked_files, %W{#{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}}
-  set :linked_files, %W{#{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}}
+  set :linked_files, %W{#{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{:application}}
+  set :linked_files, %W{#{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{:application}}
   # task :setup_config do
   #   on roles(:app) do
   #     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
