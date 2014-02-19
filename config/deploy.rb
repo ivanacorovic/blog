@@ -47,38 +47,39 @@ set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 
 namespace :deploy do
-
-  desc 'Restart application'
-  task [:restart, :start, :stop] do |command|
-    on roles(:app) do
-      # Your restart mechanism here, for example:
-      execute "/etc/init.d/unicorn_#{fetch(:application)} #{fetch(command)}"
+  [:restart, :stop, :start].each  do |command|
+    desc 'Restart application'
+    task command do
+      on roles(:app) do
+        # Your restart mechanism here, for example:
+        execute "/etc/init.d/unicorn_#{fetch(:application)} #{command.to_s}"
+      end
     end
   end
 
+ 
+  # task :start do
+  #   on roles(:app) do
+  #     # Here we can do anything such as:
+  #     # within release_path do
+  #     execute "/etc/init.d/unicorn_#{fetch(:application)} start"
+  #     # end
+  #   end
+  # end
 
-  task :start do
-    on roles(:app) do
-      # Here we can do anything such as:
-      # within release_path do
-      execute "/etc/init.d/unicorn_#{fetch(:application)} start"
-      # end
-    end
-  end
-
-  task :stop do
-    on roles(:app) do
-      # Here we can do anything such as:
-      # within release_path do
-      execute "/etc/init.d/unicorn_#{fetch(:application)} stop"
-      # end
-    end
-  end
+  # task :stop do
+  #   on roles(:app) do
+  #     # Here we can do anything such as:
+  #     # within release_path do
+  #     execute "/etc/init.d/unicorn_#{fetch(:application)} stop"
+  #     # end
+  #   end
+  # end
 
   task :setup_config do
     on roles(:app) do
-      sudo "ln -nfs /home/deployer/capistrano/current/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
-      sudo "ln -nfs /home/deployer/capistrano/current/config/unicorn_init.sh /etc/init.d/unicorn_#{fetch(:application)}"
+      execute :sudo, "ln", "-nfs", "/home/deployer/capistrano/current/config/nginx.conf", "/etc/nginx/sites-enabled/#{fetch(:application)}"
+      execute :sudo, "ln", "-nfs", "/home/deployer/capistrano/current/config/unicorn_init.sh", "/etc/init.d/unicorn_#{fetch(:application)}"
       # execute "mkdir -p #{shared_path}/config"
       # put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
       puts "Now edit the config files in #{shared_path}."
@@ -86,5 +87,4 @@ namespace :deploy do
   end
 
   after :finishing, "deploy:setup_config"
-  after :finishing, "deploy:migrate"
 end
