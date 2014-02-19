@@ -29,10 +29,10 @@ set :ssh_options, {
 set :pty, true
 
 # Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -45,7 +45,6 @@ set :rbenv_ruby, '2.1.0'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
-
 
 namespace :deploy do
 
@@ -67,7 +66,7 @@ namespace :deploy do
     end
   end
 
-    task :stop do
+  task :stop do
     on roles(:app) do
       # Here we can do anything such as:
       # within release_path do
@@ -76,17 +75,15 @@ namespace :deploy do
     end
   end
 
-  set :linked_files, %W{#{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{:application}}
-  set :linked_files, %W{#{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{:application}}
-  # task :setup_config do
-  #   on roles(:app) do
-  #     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
-  #     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
-  #     execute "mkdir -p #{shared_path}/config"
-  #     put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
-  #     puts "Now edit the config files in #{shared_path}."
-  #   end
-  # end
+  task :setup_config do
+    on roles(:app) do
+      sudo "ln -nfs #{fetch(:current_path)}/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
+      sudo "ln -nfs #{fetch(:current_path)}/config/unicorn_init.sh /etc/init.d/unicorn_#{fetch(:application)}"
+      # execute "mkdir -p #{shared_path}/config"
+      # put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+      puts "Now edit the config files in #{shared_path}."
+    end
+  end
 
-  after :finishing, "deploy:cleanup"
+  after :finishing, "deploy:setup_config"
 end
