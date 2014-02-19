@@ -1,0 +1,213 @@
+[30mDEBUG[0m [[32md92a581c[0m] Running [33m[1m/usr/bin/env [ ! -d ~/.rbenv/versions/2.1.0 ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32md92a581c[0m] Command: [34m[ ! -d ~/.rbenv/versions/2.1.0 ][0m
+[30mDEBUG[0m [[32md92a581c[0m] Finished in 1.485 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+ [34mINFO[0m [[32m041989bf[0m] Running [33m[1m/usr/bin/env mkdir -p /tmp/capistrano/[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m041989bf[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env mkdir -p /tmp/capistrano/ )[0m
+ [34mINFO[0m [[32m041989bf[0m] Finished in 0.240 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m Uploading /tmp/capistrano/git-ssh.sh 0.0%
+ [34mINFO[0m Uploading /tmp/capistrano/git-ssh.sh 100.0%
+ [34mINFO[0m [[32m158e03bb[0m] Running [33m[1m/usr/bin/env chmod +x /tmp/capistrano/git-ssh.sh[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m158e03bb[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env chmod +x /tmp/capistrano/git-ssh.sh )[0m
+ [34mINFO[0m [[32m158e03bb[0m] Finished in 0.235 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m555e1e94[0m] Running [33m[1m/usr/bin/env git ls-remote git@github.com:ivanacorovic/blog.git[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m555e1e94[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/capistrano/git-ssh.sh /usr/bin/env git ls-remote git@github.com:ivanacorovic/blog.git )[0m
+[30mDEBUG[0m [[32m555e1e94[0m] [32m	9240e387f7353b3d294fe2ab306d018df69bb7f1[0m
+[30mDEBUG[0m [[32m555e1e94[0m] [32m		[0m
+[30mDEBUG[0m [[32m555e1e94[0m] [32m	HEAD[0m
+[30mDEBUG[0m [[32m555e1e94[0m] [32m	
+[0m[30mDEBUG[0m [[32m555e1e94[0m] [32m	9240e387f7353b3d294fe2ab306d018df69bb7f1[0m
+[30mDEBUG[0m [[32m555e1e94[0m] [32m		[0m
+[30mDEBUG[0m [[32m555e1e94[0m] [32m	refs/heads/master[0m
+[30mDEBUG[0m [[32m555e1e94[0m] [32m	
+[0m[30mDEBUG[0m [[32m555e1e94[0m] Finished in 1.892 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m978bc881[0m] Running [33m[1m/usr/bin/env mkdir -pv /home/deployer/capistrano/shared /home/deployer/capistrano/releases[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m978bc881[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env mkdir -pv /home/deployer/capistrano/shared /home/deployer/capistrano/releases )[0m
+ [34mINFO[0m [[32m978bc881[0m] Finished in 0.237 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32md3c6bf1f[0m] Running [33m[1m/usr/bin/env mkdir -pv /home/deployer/capistrano/shared/bin /home/deployer/capistrano/shared/log /home/deployer/capistrano/shared/tmp/pids /home/deployer/capistrano/shared/tmp/cache /home/deployer/capistrano/shared/tmp/sockets /home/deployer/capistrano/shared/vendor/bundle /home/deployer/capistrano/shared/public/system[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32md3c6bf1f[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env mkdir -pv /home/deployer/capistrano/shared/bin /home/deployer/capistrano/shared/log /home/deployer/capistrano/shared/tmp/pids /home/deployer/capistrano/shared/tmp/cache /home/deployer/capistrano/shared/tmp/sockets /home/deployer/capistrano/shared/vendor/bundle /home/deployer/capistrano/shared/public/system )[0m
+ [34mINFO[0m [[32md3c6bf1f[0m] Finished in 0.234 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32mb296c67e[0m] Running [33m[1m/usr/bin/env mkdir -pv /home/deployer/capistrano/shared/config[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mb296c67e[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env mkdir -pv /home/deployer/capistrano/shared/config )[0m
+ [34mINFO[0m [[32mb296c67e[0m] Finished in 0.230 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32mb77c7e40[0m] Running [33m[1m/usr/bin/env [ -f /home/deployer/capistrano/shared/config/database.yml ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mb77c7e40[0m] Command: [34m[ -f /home/deployer/capistrano/shared/config/database.yml ][0m
+[30mDEBUG[0m [[32mb77c7e40[0m] Finished in 0.226 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m0bc6f5dc[0m] Running [33m[1m/usr/bin/env [ -f /home/deployer/capistrano/repo/HEAD ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m0bc6f5dc[0m] Command: [34m[ -f /home/deployer/capistrano/repo/HEAD ][0m
+[30mDEBUG[0m [[32m0bc6f5dc[0m] Finished in 0.225 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m The repository mirror is at /home/deployer/capistrano/repo
+[30mDEBUG[0m [[32m832162e4[0m] Running [33m[1m/usr/bin/env if test ! -d /home/deployer/capistrano/repo; then echo "Directory does not exist '/home/deployer/capistrano/repo'" 1>&2; false; fi[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m832162e4[0m] Command: [34mif test ! -d /home/deployer/capistrano/repo; then echo "Directory does not exist '/home/deployer/capistrano/repo'" 1>&2; false; fi[0m
+[30mDEBUG[0m [[32m832162e4[0m] Finished in 0.229 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m953bd4d9[0m] Running [33m[1m/usr/bin/env cd /home/deployer/capistrano/repo && git rev-parse --short HEAD[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m953bd4d9[0m] Command: [34mcd /home/deployer/capistrano/repo && git rev-parse --short HEAD[0m
+[30mDEBUG[0m [[32m953bd4d9[0m] [32m	9240e38[0m
+[30mDEBUG[0m [[32m953bd4d9[0m] [32m	
+[0m[30mDEBUG[0m [[32m953bd4d9[0m] Finished in 0.226 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32medf88729[0m] Running [33m[1m/usr/bin/env git remote update[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32medf88729[0m] Command: [34mcd /home/deployer/capistrano/repo && ( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env git remote update )[0m
+[30mDEBUG[0m [[32medf88729[0m] [32m	Fetching origin[0m
+[30mDEBUG[0m [[32medf88729[0m] [32m	
+[0m [34mINFO[0m [[32medf88729[0m] Finished in 1.867 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32mcbfc5435[0m] Running [33m[1m/usr/bin/env cd /home/deployer/capistrano/repo && git rev-parse --short HEAD[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mcbfc5435[0m] Command: [34mcd /home/deployer/capistrano/repo && git rev-parse --short HEAD[0m
+[30mDEBUG[0m [[32mcbfc5435[0m] [32m	9240e38[0m
+[30mDEBUG[0m [[32mcbfc5435[0m] [32m	
+[0m[30mDEBUG[0m [[32mcbfc5435[0m] Finished in 0.230 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m7833ed47[0m] Running [33m[1m/usr/bin/env if test ! -d /home/deployer/capistrano/repo; then echo "Directory does not exist '/home/deployer/capistrano/repo'" 1>&2; false; fi[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m7833ed47[0m] Command: [34mif test ! -d /home/deployer/capistrano/repo; then echo "Directory does not exist '/home/deployer/capistrano/repo'" 1>&2; false; fi[0m
+[30mDEBUG[0m [[32m7833ed47[0m] Finished in 0.228 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m087e3af2[0m] Running [33m[1m/usr/bin/env mkdir -p /home/deployer/capistrano/releases/20140219141546[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m087e3af2[0m] Command: [34mcd /home/deployer/capistrano/repo && ( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/capistrano/git-ssh.sh /usr/bin/env mkdir -p /home/deployer/capistrano/releases/20140219141546 )[0m
+ [34mINFO[0m [[32m087e3af2[0m] Finished in 0.232 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m483d53ef[0m] Running [33m[1m/usr/bin/env git archive master | tar -x -C /home/deployer/capistrano/releases/20140219141546[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m483d53ef[0m] Command: [34mcd /home/deployer/capistrano/repo && ( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 GIT_ASKPASS=/bin/echo GIT_SSH=/tmp/capistrano/git-ssh.sh /usr/bin/env git archive master | tar -x -C /home/deployer/capistrano/releases/20140219141546 )[0m
+ [34mINFO[0m [[32m483d53ef[0m] Finished in 0.242 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m6fb61b8a[0m] Running [33m[1m/usr/bin/env mkdir -pv /home/deployer/capistrano/releases/20140219141546/config[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m6fb61b8a[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env mkdir -pv /home/deployer/capistrano/releases/20140219141546/config )[0m
+ [34mINFO[0m [[32m6fb61b8a[0m] Finished in 0.230 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m1b11703e[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/config/database.yml ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m1b11703e[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/config/database.yml ][0m
+[30mDEBUG[0m [[32m1b11703e[0m] Finished in 0.225 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32m47cecdee[0m] Running [33m[1m/usr/bin/env [ -f /home/deployer/capistrano/releases/20140219141546/config/database.yml ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m47cecdee[0m] Command: [34m[ -f /home/deployer/capistrano/releases/20140219141546/config/database.yml ][0m
+[30mDEBUG[0m [[32m47cecdee[0m] Finished in 0.231 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+ [34mINFO[0m [[32mc9f3ac35[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/config/database.yml /home/deployer/capistrano/releases/20140219141546/config/database.yml[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mc9f3ac35[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/config/database.yml /home/deployer/capistrano/releases/20140219141546/config/database.yml )[0m
+ [34mINFO[0m [[32mc9f3ac35[0m] Finished in 0.228 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m6d8a5b06[0m] Running [33m[1m/usr/bin/env mkdir -pv /home/deployer/capistrano/releases/20140219141546 /home/deployer/capistrano/releases/20140219141546 /home/deployer/capistrano/releases/20140219141546/tmp /home/deployer/capistrano/releases/20140219141546/tmp /home/deployer/capistrano/releases/20140219141546/tmp /home/deployer/capistrano/releases/20140219141546/vendor /home/deployer/capistrano/releases/20140219141546/public[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m6d8a5b06[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env mkdir -pv /home/deployer/capistrano/releases/20140219141546 /home/deployer/capistrano/releases/20140219141546 /home/deployer/capistrano/releases/20140219141546/tmp /home/deployer/capistrano/releases/20140219141546/tmp /home/deployer/capistrano/releases/20140219141546/tmp /home/deployer/capistrano/releases/20140219141546/vendor /home/deployer/capistrano/releases/20140219141546/public )[0m
+[30mDEBUG[0m [[32m6d8a5b06[0m] [32m	mkdir: created directory `/home/deployer/capistrano/releases/20140219141546/tmp'[0m
+[30mDEBUG[0m [[32m6d8a5b06[0m] [32m	
+[0m [34mINFO[0m [[32m6d8a5b06[0m] Finished in 0.231 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m65e9e9a9[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/bin ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m65e9e9a9[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/bin ][0m
+[30mDEBUG[0m [[32m65e9e9a9[0m] Finished in 0.230 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32m9296ab20[0m] Running [33m[1m/usr/bin/env [ -d /home/deployer/capistrano/releases/20140219141546/bin ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m9296ab20[0m] Command: [34m[ -d /home/deployer/capistrano/releases/20140219141546/bin ][0m
+[30mDEBUG[0m [[32m9296ab20[0m] Finished in 0.227 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32mb45f6059[0m] Running [33m[1m/usr/bin/env rm -rf /home/deployer/capistrano/releases/20140219141546/bin[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mb45f6059[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env rm -rf /home/deployer/capistrano/releases/20140219141546/bin )[0m
+ [34mINFO[0m [[32mb45f6059[0m] Finished in 0.230 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32mcc49406f[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/bin /home/deployer/capistrano/releases/20140219141546/bin[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mcc49406f[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/bin /home/deployer/capistrano/releases/20140219141546/bin )[0m
+ [34mINFO[0m [[32mcc49406f[0m] Finished in 0.231 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m985f0612[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/log ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m985f0612[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/log ][0m
+[30mDEBUG[0m [[32m985f0612[0m] Finished in 0.227 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32m817eca19[0m] Running [33m[1m/usr/bin/env [ -d /home/deployer/capistrano/releases/20140219141546/log ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m817eca19[0m] Command: [34m[ -d /home/deployer/capistrano/releases/20140219141546/log ][0m
+[30mDEBUG[0m [[32m817eca19[0m] Finished in 0.259 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32me3f62f7a[0m] Running [33m[1m/usr/bin/env rm -rf /home/deployer/capistrano/releases/20140219141546/log[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32me3f62f7a[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env rm -rf /home/deployer/capistrano/releases/20140219141546/log )[0m
+ [34mINFO[0m [[32me3f62f7a[0m] Finished in 0.240 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m4c906464[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/log /home/deployer/capistrano/releases/20140219141546/log[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m4c906464[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/log /home/deployer/capistrano/releases/20140219141546/log )[0m
+ [34mINFO[0m [[32m4c906464[0m] Finished in 0.228 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m2326b1f5[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/tmp/pids ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m2326b1f5[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/tmp/pids ][0m
+[30mDEBUG[0m [[32m2326b1f5[0m] Finished in 0.229 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32m68bcab6a[0m] Running [33m[1m/usr/bin/env [ -d /home/deployer/capistrano/releases/20140219141546/tmp/pids ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m68bcab6a[0m] Command: [34m[ -d /home/deployer/capistrano/releases/20140219141546/tmp/pids ][0m
+[30mDEBUG[0m [[32m68bcab6a[0m] Finished in 0.227 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+ [34mINFO[0m [[32m60aacf72[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/tmp/pids /home/deployer/capistrano/releases/20140219141546/tmp/pids[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m60aacf72[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/tmp/pids /home/deployer/capistrano/releases/20140219141546/tmp/pids )[0m
+ [34mINFO[0m [[32m60aacf72[0m] Finished in 0.229 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32mb5ade0b9[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/tmp/cache ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mb5ade0b9[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/tmp/cache ][0m
+[30mDEBUG[0m [[32mb5ade0b9[0m] Finished in 0.230 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32m05744014[0m] Running [33m[1m/usr/bin/env [ -d /home/deployer/capistrano/releases/20140219141546/tmp/cache ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m05744014[0m] Command: [34m[ -d /home/deployer/capistrano/releases/20140219141546/tmp/cache ][0m
+[30mDEBUG[0m [[32m05744014[0m] Finished in 0.225 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+ [34mINFO[0m [[32m51ab2c7e[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/tmp/cache /home/deployer/capistrano/releases/20140219141546/tmp/cache[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m51ab2c7e[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/tmp/cache /home/deployer/capistrano/releases/20140219141546/tmp/cache )[0m
+ [34mINFO[0m [[32m51ab2c7e[0m] Finished in 0.229 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m3a0242a3[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/tmp/sockets ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m3a0242a3[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/tmp/sockets ][0m
+[30mDEBUG[0m [[32m3a0242a3[0m] Finished in 0.232 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32mbfc86f09[0m] Running [33m[1m/usr/bin/env [ -d /home/deployer/capistrano/releases/20140219141546/tmp/sockets ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mbfc86f09[0m] Command: [34m[ -d /home/deployer/capistrano/releases/20140219141546/tmp/sockets ][0m
+[30mDEBUG[0m [[32mbfc86f09[0m] Finished in 0.229 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+ [34mINFO[0m [[32m3e520bc3[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/tmp/sockets /home/deployer/capistrano/releases/20140219141546/tmp/sockets[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m3e520bc3[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/tmp/sockets /home/deployer/capistrano/releases/20140219141546/tmp/sockets )[0m
+ [34mINFO[0m [[32m3e520bc3[0m] Finished in 0.234 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32mc130f5d4[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/vendor/bundle ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mc130f5d4[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/vendor/bundle ][0m
+[30mDEBUG[0m [[32mc130f5d4[0m] Finished in 0.235 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32m9687d042[0m] Running [33m[1m/usr/bin/env [ -d /home/deployer/capistrano/releases/20140219141546/vendor/bundle ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m9687d042[0m] Command: [34m[ -d /home/deployer/capistrano/releases/20140219141546/vendor/bundle ][0m
+[30mDEBUG[0m [[32m9687d042[0m] Finished in 0.239 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+ [34mINFO[0m [[32md87925bb[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/vendor/bundle /home/deployer/capistrano/releases/20140219141546/vendor/bundle[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32md87925bb[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/vendor/bundle /home/deployer/capistrano/releases/20140219141546/vendor/bundle )[0m
+ [34mINFO[0m [[32md87925bb[0m] Finished in 0.243 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m11aec53c[0m] Running [33m[1m/usr/bin/env [ -L /home/deployer/capistrano/releases/20140219141546/public/system ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m11aec53c[0m] Command: [34m[ -L /home/deployer/capistrano/releases/20140219141546/public/system ][0m
+[30mDEBUG[0m [[32m11aec53c[0m] Finished in 0.228 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+[30mDEBUG[0m [[32m26cff4e7[0m] Running [33m[1m/usr/bin/env [ -d /home/deployer/capistrano/releases/20140219141546/public/system ][0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m26cff4e7[0m] Command: [34m[ -d /home/deployer/capistrano/releases/20140219141546/public/system ][0m
+[30mDEBUG[0m [[32m26cff4e7[0m] Finished in 0.237 seconds with exit status 1 ([1m[31mfailed[0m[0m).
+ [34mINFO[0m [[32m051397ae[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/shared/public/system /home/deployer/capistrano/releases/20140219141546/public/system[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m051397ae[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/shared/public/system /home/deployer/capistrano/releases/20140219141546/public/system )[0m
+ [34mINFO[0m [[32m051397ae[0m] Finished in 0.245 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m1cc12be9[0m] Running [33m[1m/usr/bin/env if test ! -d /home/deployer/capistrano/releases/20140219141546; then echo "Directory does not exist '/home/deployer/capistrano/releases/20140219141546'" 1>&2; false; fi[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m1cc12be9[0m] Command: [34mif test ! -d /home/deployer/capistrano/releases/20140219141546; then echo "Directory does not exist '/home/deployer/capistrano/releases/20140219141546'" 1>&2; false; fi[0m
+[30mDEBUG[0m [[32m1cc12be9[0m] Finished in 0.235 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m1fd32af0[0m] Running [33m[1mRBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 ~/.rbenv/bin/rbenv exec bundle install --binstubs /home/deployer/capistrano/shared/bin --path /home/deployer/capistrano/shared/bundle --without development test --deployment --quiet[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m1fd32af0[0m] Command: [34mcd /home/deployer/capistrano/releases/20140219141546 && ( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 ~/.rbenv/bin/rbenv exec bundle install --binstubs /home/deployer/capistrano/shared/bin --path /home/deployer/capistrano/shared/bundle --without development test --deployment --quiet )[0m
+ [34mINFO[0m [[32m1fd32af0[0m] Finished in 0.725 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32mb27819c8[0m] Running [33m[1m/usr/bin/env if test ! -d /home/deployer/capistrano/releases/20140219141546; then echo "Directory does not exist '/home/deployer/capistrano/releases/20140219141546'" 1>&2; false; fi[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mb27819c8[0m] Command: [34mif test ! -d /home/deployer/capistrano/releases/20140219141546; then echo "Directory does not exist '/home/deployer/capistrano/releases/20140219141546'" 1>&2; false; fi[0m
+[30mDEBUG[0m [[32mb27819c8[0m] Finished in 0.241 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m2438b365[0m] Running [33m[1mRBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 ~/.rbenv/bin/rbenv exec bundle exec rake assets:precompile[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m2438b365[0m] Command: [34mcd /home/deployer/capistrano/releases/20140219141546 && ( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 RAILS_ENV=production RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 ~/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )[0m
+[30mDEBUG[0m [[32m2438b365[0m] [32m	I, [2014-02-19T09:15:58.991453 #9158]  INFO -- : Writing /home/deployer/capistrano/releases/20140219141546/public/assets/application-10b0a77d1cd631cfedc5334e0632bc3f.js[0m
+[30mDEBUG[0m [[32m2438b365[0m] [32m	
+[0m[30mDEBUG[0m [[32m2438b365[0m] [32m	I, [2014-02-19T09:15:59.004392 #9158]  INFO -- : Writing /home/deployer/capistrano/releases/20140219141546/public/assets/application-27fc57308d4ce798da2b90e9a09dad4f.css[0m
+[30mDEBUG[0m [[32m2438b365[0m] [32m	
+[0m [34mINFO[0m [[32m2438b365[0m] Finished in 2.142 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32m9808bfb5[0m] Running [33m[1m/usr/bin/env if test ! -d /home/deployer/capistrano/releases/20140219141546; then echo "Directory does not exist '/home/deployer/capistrano/releases/20140219141546'" 1>&2; false; fi[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m9808bfb5[0m] Command: [34mif test ! -d /home/deployer/capistrano/releases/20140219141546; then echo "Directory does not exist '/home/deployer/capistrano/releases/20140219141546'" 1>&2; false; fi[0m
+[30mDEBUG[0m [[32m9808bfb5[0m] Finished in 0.370 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32me0dafe89[0m] Running [33m[1m/usr/bin/env cp /home/deployer/capistrano/releases/20140219141546/public/assets/manifest* /home/deployer/capistrano/releases/20140219141546/assets_manifest_backup[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32me0dafe89[0m] Command: [34mcd /home/deployer/capistrano/releases/20140219141546 && ( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env cp /home/deployer/capistrano/releases/20140219141546/public/assets/manifest* /home/deployer/capistrano/releases/20140219141546/assets_manifest_backup )[0m
+ [34mINFO[0m [[32me0dafe89[0m] Finished in 0.240 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [33mWARN[0m [SKIPPING] No Matching Host for /usr/bin/env if test ! -d /home/deployer/capistrano/releases/20140219141546; then echo "Directory does not exist '/home/deployer/capistrano/releases/20140219141546'" 1>&2; false; fi
+ [33mWARN[0m [SKIPPING] No Matching Host for RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 ~/.rbenv/bin/rbenv exec bundle exec rake db:migrate
+ [34mINFO[0m [[32m4a8833cc[0m] Running [33m[1m/usr/bin/env rm -rf /home/deployer/capistrano/current[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m4a8833cc[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env rm -rf /home/deployer/capistrano/current )[0m
+ [34mINFO[0m [[32m4a8833cc[0m] Finished in 0.244 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m834fbfd0[0m] Running [33m[1m/usr/bin/env ln -s /home/deployer/capistrano/releases/20140219141546 /home/deployer/capistrano/current[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m834fbfd0[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ln -s /home/deployer/capistrano/releases/20140219141546 /home/deployer/capistrano/current )[0m
+ [34mINFO[0m [[32m834fbfd0[0m] Finished in 0.317 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+[30mDEBUG[0m [[32mac459653[0m] Running [33m[1m/usr/bin/env ls -x /home/deployer/capistrano/releases[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mac459653[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env ls -x /home/deployer/capistrano/releases )[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m	20140219140118[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m		[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m	20140219140807[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m		[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m	20140219141030[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m		[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m	20140219141425[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m		[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m	20140219141517[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m	
+[0m[30mDEBUG[0m [[32mac459653[0m] [32m	20140219141546[0m
+[30mDEBUG[0m [[32mac459653[0m] [32m	
+[0m[30mDEBUG[0m [[32mac459653[0m] Finished in 0.594 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m Keeping 5 of 6 deployed releases on 188.226.158.126
+ [34mINFO[0m [[32m6e149bf3[0m] Running [33m[1m/usr/bin/env rm -rf /home/deployer/capistrano/releases/20140219140118[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m6e149bf3[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env rm -rf /home/deployer/capistrano/releases/20140219140118 )[0m
+ [34mINFO[0m [[32m6e149bf3[0m] Finished in 0.269 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m8e31c6c7[0m] Running [33m[1m/usr/bin/env sudo ln -nfs /home/deployer/capistrano/current/config/nginx.conf /etc/nginx/sites-enabled/capistrano[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m8e31c6c7[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env sudo ln -nfs /home/deployer/capistrano/current/config/nginx.conf /etc/nginx/sites-enabled/capistrano )[0m
+ [34mINFO[0m [[32m8e31c6c7[0m] Finished in 0.310 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m5c854bbb[0m] Running [33m[1m/usr/bin/env sudo ln -nfs /home/deployer/capistrano/current/config/unicorn_init.sh /etc/init.d/unicorn_capistrano[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m5c854bbb[0m] Command: [34m( RBENV_ROOT=~/.rbenv RBENV_VERSION=2.1.0 /usr/bin/env sudo ln -nfs /home/deployer/capistrano/current/config/unicorn_init.sh /etc/init.d/unicorn_capistrano )[0m
+ [34mINFO[0m [[32m5c854bbb[0m] Finished in 0.249 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+Now edit the config files in /home/deployer/capistrano/shared.
+[30mDEBUG[0m [[32mc76f9592[0m] Running [33m[1m/usr/bin/env if test ! -d /home/deployer/capistrano/releases; then echo "Directory does not exist '/home/deployer/capistrano/releases'" 1>&2; false; fi[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32mc76f9592[0m] Command: [34mif test ! -d /home/deployer/capistrano/releases; then echo "Directory does not exist '/home/deployer/capistrano/releases'" 1>&2; false; fi[0m
+[30mDEBUG[0m [[32mc76f9592[0m] Finished in 0.248 seconds with exit status 0 ([1m[32msuccessful[0m[0m).
+ [34mINFO[0m [[32m773d728c[0m] Running [33m[1m/usr/bin/env echo "Branch master (at 9240e38) deployed as release 20140219141546 by ivana; " >> /home/deployer/capistrano/revisions.log[0m[0m on [34m188.226.158.126[0m
+[30mDEBUG[0m [[32m773d728c[0m] Command: [34mecho "Branch master (at 9240e38) deployed as release 20140219141546 by ivana; " >> /home/deployer/capistrano/revisions.log[0m
+ [34mINFO[0m [[32m773d728c[0m] Finished in 0.243 seconds with exit status 0 ([1m[32msuccessful[0m[0m).

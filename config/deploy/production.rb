@@ -13,7 +13,7 @@
 # something that quacks like a hash can be used to set
 # extended properties on the server.
 # server ""
-server '188.226.158.126', user: 'deployer', roles: %w{web app}, primary: true
+server '188.226.158.126', user: 'deployer', roles: %w{web app db}, primary: true
 
 # you can set custom ssh options
 # it's possible to pass any option but you need to keep in mind that net/ssh understand limited list of options
